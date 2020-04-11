@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block head %}
+<title>Page index</title>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+    {% for product in products %}
+           <div class="card m-3 col-3">
+               <h5 class="card-header">
+                   {{product}}
+               </h5>
+               <div class="card-body">
+                   <p class="card-text">
+                       {{product}} c'est de la drogue!
+                   </p>
+               </div>
+           </div>
+    {% endfor %}
+    </div>
+{% endblock %}
